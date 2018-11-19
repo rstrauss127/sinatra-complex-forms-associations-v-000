@@ -33,7 +33,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-    binding.pry
+  #Sbinding.pry
     @pet = Pet.find(params[:id])
     if !params["pet_name"].empty?
       @pet.name = params["pet_name"]
