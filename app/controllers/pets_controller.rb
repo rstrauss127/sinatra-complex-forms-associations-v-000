@@ -37,7 +37,6 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     if !params["pet_name"].empty?
       @pet.name = params["pet_name"]
-
     end
     @pet.save
     redirect to "pets/#{@pet.id}"
