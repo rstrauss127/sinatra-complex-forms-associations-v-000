@@ -6,7 +6,8 @@
   <input type="text" name="pet_name" id="pet_namee">
 
   <%@owners.each do |owner|%>
-    <input type="checkbox" name="<%=owner.id%>" id="<%=owner.id%>" value="<%=owner.id%>"<%='checked' if @pet.owner_id == owner.id%>><%=owner.name%></input>
+  <label for="<%=owner.id%>"><%=owner.name%></label>
+    <input type="checkbox" name="<%owner.name%>" id="<%=owner.id%>" value="<%=owner.id%>"<%='checked' if @pet.owner == owner%>></input>
   <%end%>
   <h2>or make a new owner</h2>
   <input type="text" name="owner[name]" id="owner_name">
